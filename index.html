@@ -1,74 +1,44 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Challenge: The dinner table</title>
-       
-    </head>
-    <body>
+<!-- This is based on DillingerLee's great template here:
+https://github.com/Team-Code/KA_Offline -->
+<html> 
+ <head>
+    <title>Processing.JS inside Webpages: Template</title> 
+</head>
+ <body>
+    <p align="center"> 
+	<!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+ </body>
+ 
+ <!-- Run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(400, 400); 
+        frameRate(30);
         
+        // ProgramCodeGoesHere
+        fill(255, 255, 0);
+        ellipse(200, 200, 200, 200);
+        noFill();
+        stroke(0, 0, 0);
+        strokeWeight(2);
+        arc(200, 200, 150, 100, 0, PI);
+        fill(0, 0, 0);
+        ellipse(250, 200, 10, 10);
+        ellipse(153, 200, 10, 10);
+    }};
 
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
 
-    
-    
-        <h1>Our dinner menu</h1>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Meal</th>
-                    <th>Ingredients</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Meal</td>
-                    <td>Ingredients</td>
-                    <td>Price</td>
-                </tr>
-                <tr>
-                    <td>Meal</td>
-                    <td>Ingredients</td>
-                    <td>Price</td>
-                </tr>
-                <tr>
-                    <td>Meal</td>
-                    <td>Ingredients</td>
-                    <td>Price</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        
-<script src="processing-1.3.6.min.js"></script>
-<canvas data-processing-sources="hello-web.pde"></canvas>
-        
-        <script>
-            
-            <!--         position of the ball -->
-var x = 20;
-<!-- // how far the ball moves every time -->
-var speed = 5;
-            
-draw = function() {
-    background(202, 255, 97);
-    
-    fill(66, 66, 66);
-    ellipse(x, 200, 50, 50);
-    
-    if (x > 375) {
-        speed = -5;
-    }
-    if (x < 25) {
-        speed = 5;
-    }
-
-<!--     // move the ball -->
-    x = x + speed;
-
-};
-        </script>
-        
-    </body>
 </html>
