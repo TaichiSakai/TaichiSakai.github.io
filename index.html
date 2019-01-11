@@ -7,28 +7,7 @@
     </head>
     <body>
         
-<!--         position of the ball -->
-var x = 20;
-<!-- // how far the ball moves every time -->
-var speed = 5;
 
-draw = function() {
-    background(202, 255, 97);
-    
-    fill(66, 66, 66);
-    ellipse(x, 200, 50, 50);
-    
-    if (x > 375) {
-        speed = -5;
-    }
-    if (x < 25) {
-        speed = 5;
-    }
-
-<!--     // move the ball -->
-    x = x + speed;
-
-};
 
     
     
@@ -66,5 +45,34 @@ draw = function() {
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+        
+        <script>
+            $function(){
+            <!--         position of the ball -->
+var x = 20;
+<!-- // how far the ball moves every time -->
+var speed = 5;
+
+draw = function() {
+    background(202, 255, 97);
+    
+    fill(66, 66, 66);
+    ellipse(x, 200, 50, 50);
+    
+    if (x > 375) {
+        speed = -5;
+    }
+    if (x < 25) {
+        speed = 5;
+    }
+
+<!--     // move the ball -->
+    x = x + speed;
+
+};
+                
+};
+        </script>
+        
     </body>
 </html>
