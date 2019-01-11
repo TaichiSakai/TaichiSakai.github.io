@@ -27,23 +27,21 @@ https://github.com/Team-Code/KA_Offline -->
         // position of the ball
 var x = 20;
 // how far the ball moves every time
-var speed = 10;
+var speed = 4;
 
 draw = function() {
     background(202, 255, 97);
     
     fill(255, 79, 25);
-    ellipse(x+100, 300, 50, 50);
-    ellipse(x+50, 300, 50, 50);
     ellipse(x, 200, 50, 50);
 	
     
     
     if (x > 375) {
-        speed = -10;
+        speed = -4;
     }
     if (x < 25) {
-        speed = 10;
+        speed = 4;
     }
 
     // move the ball
