@@ -45,7 +45,7 @@ var Button = function(config) {
 
 //draw the button
 Button.prototype.draw = function() {
-    if (this.isMouseInside() && mouseIsPressed) {
+    if (this.isMouseInside() && mousePressed) {
         fill(255, 255, 255);
     }
     else {
