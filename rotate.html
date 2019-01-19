@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- This is based on DillingerLee's great template here:
+https://github.com/Team-Code/KA_Offline -->
+<html>
+ <head>
+    <title>Processing.JS inside Webpages: Practice</title>
+</head>
+ <body>
+    <p align="center">
+	<!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas"></canvas>
+    </p>
+	 <p>The game has started! Press the button below, and go faster than any other rabbits! Refresh (ctrl + R) if you try again.<br><br>Created by: Taichi<br><br>
+All code is owned by its respective author and made available under the following license: <a href="https://opensource.org/licenses/mit-license.php">MIT license</a>
+All non-code (such as writing, drawings, images, etc.) are also owned by their respective author and made available under the following license: <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</a>
+For more information please see: <a href="https://www.khanacademy.org/about/tos#5">Terms of Service</a></p>
+
+ </body>
+
+ <!-- Run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(400, 400);
+        frameRate(45);
+
+        // ProgramCodeGoesHere
+
+noStroke();
+background(0, 0, 0);
+var r = 255;
+var g = 90;
+var b = 0;
+fill(r, g, b);
+
+for (var x = 0; x < 360; x+=30) {
+pushMatrix();
+translate(200,200);
+rotate(x);
+rect(0, 0, 150, 15);
+popMatrix();
+fill(r, g, b);
+r -= 20;
+g += 4;
+b += 1;
+
+}
+
+    }};
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas");
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc);
+ </script>
+
+
+</html>
