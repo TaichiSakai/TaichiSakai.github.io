@@ -33,24 +33,38 @@ For more information please see: <a href="https://www.khanacademy.org/about/tos#
 
         // ProgramCodeGoesHere
 
-noStroke();
-background(0, 0, 0);
-var r = 255;
-var g = 90;
-var b = 0;
-fill(r, g, b);
+var diameter = 600;
+var decreaseAmt = 0.02;
+var scaleF = 1.0;
 
-for (var x = 0; x < 360; x+=30) {
-pushMatrix();
-translate(200,200);
-rotate(x);
-rect(0, 0, 150, 15);
-popMatrix();
-fill(r, g, b);
-r -= 20;
-g += 4;
-b += 1;
+var drawWhiteCircle = function(diameter) {
+    fill(255, 255, 255);
+    ellipse(0, 0, diameter, diameter);
+};
 
+var drawBlackCircle = function(diameter) {
+    fill(0, 0, 0);
+    ellipse(0, 0, diameter, diameter);
+};
+
+background(255, 255, 255);
+
+while (scaleF >0) {
+    //black circles
+    pushMatrix();
+    translate(200, 200);
+    scale(scaleF);
+    drawBlackCircle(diameter);
+    scaleF -= decreaseAmt;
+    popMatrix();
+    
+    //white circles
+    pushMatrix();
+    translate(200, 200);
+    scale(scaleF);
+    drawWhiteCircle(diameter);
+    scaleF -= decreaseAmt;
+    popMatrix();
 }
 
     }};
