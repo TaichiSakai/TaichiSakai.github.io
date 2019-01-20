@@ -32,40 +32,35 @@ For more information please see: <a href="https://www.khanacademy.org/about/tos#
         frameRate(0);
 
         // ProgramCodeGoesHere
-        var backgroundColour = color(255, 255, 255);
-var nodeColour = color(40, 168, 107);
-var edgeColour = color(34, 68, 204);
+       var backgroundColour = color(250, 250, 250);
+var nodeColour = color(250, 13, 33);
+var edgeColour = color(4, 5, 5);
 var nodeSize = 8;
 
-var node0 = [-100, -100, -100];
-var node1 = [-100, -100,  100];
-var node2 = [-100,  100, -100];
-var node3 = [-100,  100,  100];
-var node4 = [ 100, -100, -100];
-var node5 = [ 100, -100,  100];
-var node6 = [ 100,  100, -100];
-var node7 = [ 100,  100,  100];
-var nodes = [node0, node1, node2, node3, node4, node5, node6, node7];
-
-var edge0  = [0, 1];
-var edge1  = [1, 3];
-var edge2  = [3, 2];
-var edge3  = [2, 0];
-var edge4  = [4, 5];
-var edge5  = [5, 7];
-var edge6  = [7, 6];
-var edge7  = [6, 4];
-var edge8  = [0, 4];
-var edge9  = [1, 5];
-var edge10 = [2, 6];
-var edge11 = [3, 7];
-var edges = [edge0, edge1, edge2, edge3, edge4, edge5, edge6, edge7, edge8, edge9, edge10, edge11];
+var createCuboid = function(x, y, z, w, h, d) {
+    var nodes = [[x,   y,   z  ],
+                 [x,   y,   z+d],
+                 [x,   y+h, z  ],
+                 [x,   y+h, z+d],
+                 [x+w, y,   z  ],
+                 [x+w, y,   z+d],
+                 [x+w, y+h, z  ],
+                 [x+w, y+h, z+d]];
+    var edges = [[0, 1], [1, 3], [3, 2], [2, 0],
+                 [4, 5], [5, 7], [7, 6], [6, 4],
+                 [0, 4], [1, 5], [2, 6], [3, 7]];
+    return { 'nodes': nodes, 'edges': edges };
+};
+    
+var object = createCuboid(0, 0, 0, 100, 160, 50);
+var nodes = object.nodes;
+var edges = object.edges;
 
 // Rotate shape around the z-axis
 var rotateZ3D = function(theta) {
     var sinTheta = sin(theta);
     var cosTheta = cos(theta);
-
+    
     for (var n=0; n<nodes.length; n++) {
         var node = nodes[n];
         var x = node[0];
@@ -78,7 +73,7 @@ var rotateZ3D = function(theta) {
 var rotateY3D = function(theta) {
     var sinTheta = sin(theta);
     var cosTheta = cos(theta);
-
+    
     for (var n=0; n<nodes.length; n++) {
         var node = nodes[n];
         var x = node[0];
@@ -91,7 +86,7 @@ var rotateY3D = function(theta) {
 var rotateX3D = function(theta) {
     var sinTheta = sin(theta);
     var cosTheta = cos(theta);
-
+    
     for (var n=0; n<nodes.length; n++) {
         var node = nodes[n];
         var y = node[1];
@@ -100,13 +95,14 @@ var rotateX3D = function(theta) {
         node[2] = z * cosTheta + y * sinTheta;
     }
 };
+
 rotateZ3D(30);
 rotateY3D(30);
 rotateX3D(30);
 
 var draw= function() {
     background(backgroundColour);
-
+    
     // Draw edges
     stroke(edgeColour);
     for (var e=0; e<edges.length; e++) {
@@ -127,12 +123,13 @@ var draw= function() {
 
 };
 
-mouseDragged = function() {
+var mouseDragged = function() {
     rotateY3D(mouseX - pmouseX);
     rotateX3D(mouseY - pmouseY);
 };
 
 translate(200, 200);
+
 
 
     }};
