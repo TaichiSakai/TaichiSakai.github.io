@@ -19,12 +19,7 @@
             margin-bottom: 5px;
 
         }
-        .coverpic {
-             width: 240px;
-            height: 360px;
-            background: #ddd;
-            margin-bottom: 5px;
-        }
+       
     </style>
 </head>
 
@@ -56,13 +51,14 @@
         <div class="cover text-black text-center py-5"></a>
             <h1 class="display-4 mb-4">Responsive App</h1>
 
-<div class="mb-5 row">
-    
-    <div class="col-sm-12">
-         <img src="https://user-images.githubusercontent.com/46588505/52958879-585db700-33d8-11e9-89f1-6ec421843995.jpg" class="coverpic">
-    </div>
-   
-</div>
+        
+        
+<p align="center">
+	<!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas"></canvas>
+    </p>
+	
+
 
        
         </div>
@@ -265,6 +261,60 @@
 
 
     <!-- Optional JavaScript -->
+         <!-- Run all the JavaScript stuff -->
+ <!-- Include the processing.js library -->
+ <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>
+
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(400, 400);
+        frameRate(45);
+
+        // ProgramCodeGoesHere
+
+var diameter = 600;
+var decreaseAmt = 0.02;
+var scaleF = 1.0;
+
+var drawWhiteCircle = function(diameter) {
+    fill(255, 255, 255);
+    ellipse(0, 0, diameter, diameter);
+};
+
+var drawBlackCircle = function(diameter) {
+    fill(0, 0, 0);
+    ellipse(0, 0, diameter, diameter);
+};
+
+background(255, 255, 255);
+
+while (scaleF >0) {
+    //black circles
+    pushMatrix();
+    translate(200, 200);
+    scale(scaleF);
+    drawBlackCircle(diameter);
+    scaleF -= decreaseAmt;
+    popMatrix();
+    
+    //white circles
+    pushMatrix();
+    translate(200, 200);
+    scale(scaleF);
+    drawWhiteCircle(diameter);
+    scaleF -= decreaseAmt;
+    popMatrix();
+}
+
+    }};
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas");
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc);
+ </script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
