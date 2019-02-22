@@ -27,29 +27,24 @@
 
     <header>
 
-        <div class="alert alert-info text-center mb-0 rounded-0 alert-dismissible fade show">
-            News!  News!  News!  News! 
-            <button class="close" data-dismiss="alert">
-             &times;
-            </button>
-        </div>
         
        <!-- sample from here -->
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-      <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-      <nav class="my-2 my-md-0 mr-md-3">
-        <a class="p-2 text-dark" href="#">Features</a>
-        <a class="p-2 text-dark" href="#">Enterprise</a>
-        <a class="p-2 text-dark" href="#">Support</a>
-        <a class="p-2 text-dark" href="#">Pricing</a>
+      <h5 class="my-0 mr-md-auto font-weight-bold" id="top">PingPong.org</h5>
+      <nav class="my-4 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#features">User Voice</a>
+        <a class="p-2 text-dark" href="#plans">Plans</a>
+        <a class="p-2 text-dark" href="#howtouse">How to Play</a>
+        <a class="p-2 text-dark" href="#pricing">Pricing</a>
+       
       </nav>
-      <a class="btn btn-outline-primary" href="#">Sign up</a>
+      
     </div>
  <!-- sample  ends-->    
 
 
         <div class="cover text-black text-center py-5"></a>
-            <h1 class="display-4 mb-4">Responsive App</h1>
+            <h1 class="display-4 mb-4">PingPong Game</h1><br><br>
 
         
         
@@ -66,31 +61,31 @@
 
     <main>
         <section class="py-5">
-            <h2 class="text-center mb-5">Features</h2>
+            <h2 class="text-center mb-5" id="features">User Voice</h2>
             <div class="container">
-                <div class="mb-5 row">
+                <div class="mb-10 row">
 
-                    <div class="col-sm-8">
-                        <h3>Awesome</h3>
-                        <p> hello hello hello hello hello hello hello hello hello hello hello hello <span class="font-weight-bold text-info" data-toggle="tooltip"
-                                title="This is AWESOME" data-placement="bottom">hello</span>
-                            hello hello hello hello hello hello hello hello hello hello hello hello  hello hello hello hello hello hello hello hello hello hello hello hello </p>
+                    <div class="col-sm-8 mb-5">
+                        <h3 class="mb-5">Awesome Game</h3>
+                        <p> This game is awesome. It is my first impression. The detailed design, game system, everything was <span class="font-weight-bold text-info" data-toggle="tooltip"
+                                title="The real AWESOME" data-placement="bottom">perfect</span>.
+                            There is no reason to miss this game.</p>
                     </div>
 
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 mb-5">
                         <img src="https://user-images.githubusercontent.com/46588505/52958879-585db700-33d8-11e9-89f1-6ec421843995.jpg" class="w-100 rounded-circle">
                     </div>
 
                 </div>
 
-                <div class="mb-5 row">
+                <div class="mb-10 row">
 
-                    <div class="col-sm-8 order-sm-2">
-                        <h3>Awesome</h3>
-                        <p> hello hello hello hello hello hello hello hello hello hello hello hello  hello hello hello hello hello hello hello hello hello hello hello hello  hello hello hello hello hello hello hello hello hello hello hello hello  hello hello hello hello hello hello hello hello hello hello hello hello </p>
+                    <div class="col-sm-8 order-sm-2 mb-5">
+                        <h3 class="mb-5">I like it!</h3>
+                        <p>It reminds me of the old game I played with my windows desktop. The simple rule and action, everyone will like this PingPong. </p>
                     </div>
 
-                    <div class="col-sm-4 order-sm-1">
+                    <div class="col-sm-4 order-sm-1 mb-5">
                         <img src="https://user-images.githubusercontent.com/46588505/52958840-41b76000-33d8-11e9-85b1-a3be24df5521.jpg" class="w-100 rounded-circle">
                     </div>
 
@@ -99,7 +94,7 @@
         </section>
 
         <section class="bg-light text-center py-5">
-            <h2 class="mb-5">Plans</h2>
+            <h2 class="mb-5" id="plans">Plans</h2>
 
             <div class="container">
                 <table class="table table-hover">
@@ -112,15 +107,15 @@
 
                     <tbody>
                         <tr>
-                            <td>AAA</td>
-                            <td>BBB</td>
+                            <td>EASY</td>
+                            <td>HARD</td>
                         </tr>
                         <tr>
-                            <td>AAA</td>
-                            <td>BBB</td>
+                            <td>5 POINTS MATCH</td>
+                            <td>10 POINTS MATCH</td>
                         </tr>
                         <tr>
-                            <td>CCC</td>
+                            <td>60 SECONDS</td>
                             <td>NONE</td>
                         </tr>
 
@@ -130,21 +125,21 @@
         </section>
 
         <section class="py-5">
-            <h2 class="mb-5 text-center">How to Use</h2>
+            <h2 class="mb-5 text-center" id="howtouse">How to Play</h2>
             <div class="container">
                 <ul class="nav nav-tabs">
-                    <li class="nav-item"><a href="#iOS" class="nav-link active" data-toggle="tab">iOS</a></li>
-                    <li class="nav-item"><a href="#android" class="nav-link" data-toggle="tab">Android</a></li>
+                    <li class="nav-item"><a href="#iOS" class="nav-link active" data-toggle="tab">Desktop</a></li>
+                    <li class="nav-item"><a href="#android" class="nav-link" data-toggle="tab">Smart Phone</a></li>
                 </ul>
 
                 <div class="tab-content py-5">
 
                     <div id="iOS" class="tab-pane active">
-                        <p>iOS good good good good iOS good good good good iOS good good good good iOS good good good good iOS good good good good iOS good good good good iOS good good good good </p>
+                        <p>Press ↑ to move the paddle up. </p><br><p>Press ↓ to move the paddle down.</p><br><p> Press space key to fix the paddle.</p>
                     </div>
 
                     <div id="android" class="tab-pane">
-                        <p>Android nice nice nice nice Android nice nice nice nice Android nice nice nice nice Android nice nice nice nice Android nice nice nice nice Android nice nice nice nice </p>
+                        <p>Currently, this device is not available.</p>
                     </div>
 
                 </div>
@@ -155,9 +150,9 @@
             
                
  <!-- sample from here -->
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-      <h1 class="display-4">Pricing</h1>
-      <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.</p>
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center bg-light mb-5">
+      <h1 class="display-4" id="pricing">Pricing</h1><br>
+      <p class="lead">There are three plans for you.</p>
     </div>
 
     <div class="container">
@@ -166,7 +161,7 @@
           <div class="card-header">
             <h4 class="my-0 font-weight-normal">Free</h4>
           </div>
-          <div class="card-body">
+          <div class="card-body ">
             <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
             <ul class="list-unstyled mt-3 mb-4">
               <li>10 users included</li>
@@ -213,9 +208,9 @@
         <div class="row">
           <div class="col-12 col-md">
             <img class="mb-2" src="../../assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
-            <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+            <small class="d-block mb-3 text-muted">&copy; 2018-2019</small><br><a href="#top">back to top</a><br>
           </div>
-          <div class="col-6 col-md">
+          <div class="col-6 col-md mt-5">
             <h5>Features</h5>
             <ul class="list-unstyled text-small">
               <li><a class="text-muted" href="#">Cool stuff</a></li>
@@ -226,7 +221,7 @@
               <li><a class="text-muted" href="#">Last time</a></li>
             </ul>
           </div>
-          <div class="col-6 col-md">
+          <div class="col-6 col-md mt-5">
             <h5>Resources</h5>
             <ul class="list-unstyled text-small">
               <li><a class="text-muted" href="#">Resource</a></li>
@@ -235,7 +230,7 @@
               <li><a class="text-muted" href="#">Final resource</a></li>
             </ul>
           </div>
-          <div class="col-6 col-md">
+          <div class="col-6 col-md mt-5">
             <h5>About</h5>
             <ul class="list-unstyled text-small">
               <li><a class="text-muted" href="#">Team</a></li>
@@ -254,7 +249,7 @@
 
     </main>
 
-    <footer class="text-center text-muted py-5">
+    <footer class="text-center text-muted py-5 bg-light">
         <p>Copyright YYYY Taichi</p>
       <p><a href= "https://taichisakai.github.io/index.html">ホームへのリンク</a><p>
     </footer>
@@ -375,13 +370,13 @@
 
   var updatePlayer2 = function() {
       if (abs(player2Y-ball.position.y) < PLAYER_MOVE_SPEED){
-          player2Y = ball.position.y;
+          player2Y = ball.position.y -5;
       }
       else if (player2Y-ball.position.y >= PLAYER_MOVE_SPEED) {
-          player2Y -= PLAYER_MOVE_SPEED;
+          player2Y -= PLAYER_MOVE_SPEED -5;
       }
       else if (player2Y-ball.position.y <= PLAYER_MOVE_SPEED) {
-          player2Y += PLAYER_MOVE_SPEED;
+          player2Y += PLAYER_MOVE_SPEED -5;
       }
 
   };
